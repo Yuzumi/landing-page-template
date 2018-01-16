@@ -174,3 +174,52 @@ header nav li:last-child {
         margin-bottom: 15px;
     }
 }
+
+/**************************************
+    Hero Section
+*/
+
+.hero {
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.hero .bg-img {
+    background-image: url('../img/hero.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: var(--bg-color);
+    z-index: -1;
+}
+
+.hero .bg-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414a4f;
+    opacity: .75;
+}
+
+.hero h1 {
+    font: normal 60px 'Open Sans', sans-serif;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}
