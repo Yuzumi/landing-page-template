@@ -1,0 +1,117 @@
+
+/**************************************
+    Reset
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li,
+ul,
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**************************************
+    Variables
+*/
+
+:root {
+    --html-text-color: #555;
+
+    --link-main-opacity: .7;
+    --link-hover-opacity: 1;
+
+    --bg-color: #2196f3;
+
+    --section-padding: 125px 100px;
+}
+
+section {
+    --text-align: center;
+    --margin-bottom: 35px; 
+}
+
+/**************************************
+    General
+*/
+
+html {
+    font: normal 16px sans-serif;
+    color: -var(--html-text-color);
+}
+
+a {
+    opacity: var(--link-main-opacity);
+}
+
+a:hover {
+    opacity: var(--link-hover-opacity);
+}
+
+.btn {
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: var(--bg-color);
+    font-weight: 800;
+    text-align: center;
+}
+
+hr {
+    width: 150px;
+    height: 2px;
+    background-color: var(--bg-color);
+    border: 0;
+    margin-bottom: 80px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--section-padding);
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --section-padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --section-padding: 80px 30px;
+    }
+}
+
+section h3.title {
+    color: #414a4f;
+    text-transform: capitalize;
+    font: bold 32px 'Open Sans', sans-serif;
+    margin-bottom: var(--margin-bottom);
+    text-align: var(--text-align);
+}
+
+section p {
+    max-width: 800px;
+    text-align: var(--text-align);
+    margin-bottom: var(--margin-bottom);
+    padding: 0 20px;
+    line-height: 2;
+}
+
+ul.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
